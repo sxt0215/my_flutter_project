@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_project/LoginBeforeHome.dart';
 
 void main() => runApp(MyApp());
 
@@ -96,6 +97,21 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+
+
+            new GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new LoginBeforeHome()));
+              },
+              child: new Text(
+                "点击我跳转到Sample页面",
+                style: new TextStyle(fontSize: 26.0, color: Colors.red),
+              ),
+            ),
+
           ],
         ),
       ),
